@@ -1,0 +1,71 @@
+.Nav{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12%;
+}
+
+.Nav .logo a{
+  font-size: 28px;
+  color: white;
+  font-weight: 600;
+}
+
+.Nav ul li{
+  display: inline-block;
+  margin: 0 12px;
+  transition: .6s ;
+}
+.Nav ul li a{
+  color: white;
+  transition: .6s;
+}
+.Nav ul li:hover a{
+  color: rgb(255, 68, 0);
+  
+}
+.Nav ul li:hover{
+  transform: scale(1.1) translateY(-5px);
+}
+#bars{
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width:900px) {
+  #bars{
+    display: block;
+  }
+  .Nav{
+    position: relative;
+    z-index: 99;
+  }
+  .Nav ul{
+    position: absolute;
+    top: 100%;
+    background-color: rgb(15, 15, 15);
+    width: 100%;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    transition: .6s ;
+  }
+
+  .Nav .activeNav{
+    height: 450px ;
+  }
+
+  .Nav ul li{
+    display: block;
+    margin: 30px 0;
+    padding: 10px 0;
+    padding-left: 12%;
+  }
+  .Nav ul li:hover{
+    transform: scale(1) translateY(0);
+  }
+}
